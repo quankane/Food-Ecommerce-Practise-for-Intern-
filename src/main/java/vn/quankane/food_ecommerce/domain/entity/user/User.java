@@ -8,6 +8,7 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Nationalized;
 import vn.quankane.food_ecommerce.constant.CommonConstant;
 import vn.quankane.food_ecommerce.domain.entity.base.BaseEntity;
+import vn.quankane.food_ecommerce.domain.entity.cart.Cart;
 
 import java.util.Date;
 
@@ -67,4 +68,7 @@ public class User extends BaseEntity {
 
     @Nationalized
     String nationality;
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    Cart cart;
 }
