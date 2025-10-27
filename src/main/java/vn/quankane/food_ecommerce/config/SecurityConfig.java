@@ -24,6 +24,7 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import vn.quankane.food_ecommerce.constant.RoleConstant;
+import vn.quankane.food_ecommerce.security.CustomPreFilter;
 import vn.quankane.food_ecommerce.security.CustomUserDetails;
 import vn.quankane.food_ecommerce.security.CustomUserDetailsService;
 
@@ -37,6 +38,8 @@ import java.util.Arrays;
 public class SecurityConfig {
 
     CustomUserDetailsService customUserDetailsService;
+
+    CustomPreFilter customizePreFilter;
 
     @Value("${security.public-endpoints}")
     @NonFinal()
@@ -104,6 +107,8 @@ public class SecurityConfig {
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
         daoAuthenticationProvider.setPasswordEncoder(passwordEncoder());
         daoAuthenticationProvider.setUserDetailsService(userDetailsService());
+
+        return daoAuthenticationProvider;
     }
 
     @Bean
@@ -111,4 +116,5 @@ public class SecurityConfig {
         return customUserDetailsService;
     }
 }
+
 
