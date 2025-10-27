@@ -1,0 +1,8 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: Food Ecommerce
+  profiles:
+    active: @spring.profiles.active@
