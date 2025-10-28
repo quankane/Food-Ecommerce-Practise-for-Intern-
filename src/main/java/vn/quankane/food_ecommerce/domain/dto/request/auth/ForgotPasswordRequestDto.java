@@ -12,15 +12,10 @@ import lombok.experimental.FieldDefaults;
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class LoginRequestDto {
+public class ForgotPasswordRequestDto {
 
-    @Schema(description = "Email người dùng", example = "quanducbui2017@gmail.com")
+    @Schema(description = "Email người dùng", example = "user@gmail.com")
     @NotBlank(message = ErrorMessage.INVALID_SOME_THING_FIELD_IS_REQUIRED)
     @Email
     String email;
-
-    @Schema(description = "Mật khẩu", example = "Quankane1905@")
-    @NotBlank(message = ErrorMessage.NOT_BLANK_FIELD)
-    String password;
-
 }
