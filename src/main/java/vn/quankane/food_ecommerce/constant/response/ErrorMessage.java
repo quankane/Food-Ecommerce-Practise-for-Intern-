@@ -1,5 +1,7 @@
 package vn.quankane.food_ecommerce.constant.response;
 
+import lombok.NoArgsConstructor;
+
 public class ErrorMessage {
 
     private ErrorMessage() {
@@ -49,6 +51,8 @@ public class ErrorMessage {
         public static final String EXPIRED_REFRESH_TOKEN = "exception.auth.expired.refresh.token";
         public static final String ERR_TOKEN_INVALIDATED = "exception.auth.token.invalidated";
         public static final String ERR_MALFORMED_TOKEN = "exception.auth.malformed.token";
+        public static final String ERR_INCORRECT_CREDENTIALS = "exception.username.or.password.incorrect";
+        public static final String ERR_INTERNAL_ERROR = "Authentication failed due to internal error.";
         // OTP
         public static final String ERR_PENDING_RESET_REQUEST_NULL = "exception.auth.pending.reset.request.null";
         public static final String ERR_PENDING_REGISTER_REQUEST_NULL = "exception.auth.pending.register.request.null";
@@ -189,6 +193,12 @@ public class ErrorMessage {
         public static final String ERR_COMMUNE_EMPTY = "exception.commune.empty";
         public static final String ERR_DETAIL_ADDRESS_NULL = "exception.detail.address.null";
         public static final String ERR_ADDRESS_NOT_FOUND = "exception.address.not.found";
+    }
+
+    @NoArgsConstructor
+    public static class Email {
+
+        public static final String ERR_SEND_EMAIL_FAILED = "exception.send.email.failed";
     }
 
 }

@@ -1,5 +1,7 @@
 package vn.quankane.food_ecommerce.constant.response;
 
+import lombok.NoArgsConstructor;
+
 public class SuccessMessage {
 
     private SuccessMessage() {}
@@ -115,6 +117,12 @@ public class SuccessMessage {
         public static final String UPDATE_STATUS_ORDER_SUCCESS = "Update status order successfully";
         public static final String GET_INVOICE_SUCCESS = "Get invoice success";
 
+    }
+
+    @NoArgsConstructor
+    public static class Email {
+
+        public static final String ERR_SEND_EMAIL_SUCCESS = "exception.send.email.successful";
     }
 
 }

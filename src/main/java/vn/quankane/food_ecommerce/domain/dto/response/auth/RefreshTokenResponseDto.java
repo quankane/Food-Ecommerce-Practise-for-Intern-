@@ -12,6 +12,7 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class RefreshTokenResponseDto {
 
+    @Builder.Default
     String tokenType = CommonConstant.BEARER_TOKEN;
 
     String accessToken;

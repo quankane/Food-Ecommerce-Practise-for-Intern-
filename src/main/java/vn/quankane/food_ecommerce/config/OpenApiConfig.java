@@ -19,7 +19,7 @@ public class OpenApiConfig {
 
     @Bean
     public GroupedOpenApi groupedOpenApi(@Value("${openapi.service.api-docs}") String apiDocs) {
-        return GroupedOpenApi.builder().group(apiDocs).packagesToScan("com.example.haus.controller").build();
+        return GroupedOpenApi.builder().group(apiDocs).packagesToScan("vn.quankane.food_ecommerce.controller").build();
     }
 
     @Bean

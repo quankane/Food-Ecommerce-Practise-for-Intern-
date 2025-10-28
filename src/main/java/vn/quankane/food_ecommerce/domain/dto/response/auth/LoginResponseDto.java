@@ -1,7 +1,9 @@
 package vn.quankane.food_ecommerce.domain.dto.response.auth;
 
+import com.google.api.client.auth.oauth2.BearerToken;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import vn.quankane.food_ecommerce.constant.CommonConstant;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -11,7 +13,8 @@ import lombok.experimental.FieldDefaults;
 @Builder
 public class LoginResponseDto {
 
-    String tokenType;
+    @Builder.Default
+    String tokenType = CommonConstant.BEARER_TOKEN;
 
     String userId;
 

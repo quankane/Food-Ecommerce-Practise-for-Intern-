@@ -10,4 +10,10 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, String> {
 
     Optional<User> findByUsernameAndIsDeletedFalse(String username);
+
+    boolean existsUserByUsernameAndIsDeletedFalse(String username);
+
+    Optional<User> findByEmailAndIsDeletedFalse(String email);
+
+    boolean existsUserByEmailAndIsDeletedFalse(String email);
 }

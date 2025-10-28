@@ -35,6 +35,15 @@ spring:
       ddl-auto: update
       dialect: org.hibernate.dialect.MySQLDialect
       use_sql_comments: true
+  #Verify email
+  sendGrid:
+    apiKey: ${SENDGRID_API_KEY}
+    fromEmail: quanducbui2023@gmail.com
+    templateRegistrationId: d-edda5c8267604fdfb5fe08227332ed6c
+    templateForgotId: d-fe449caceb8545679f70b7f1f3fabae9
+    imagePrev: https://res.cloudinary.com/dgwnoquie/image/upload/v1755789933/image-43_f3kmgh.jpg
+    imageNext: https://res.cloudinary.com/dgwnoquie/image/upload/v1755790009/KHACH-BEP-15_bj8u43.jpg
+    logo: https://res.cloudinary.com/dgwnoquie/image/upload/v1755791051/HAUS-logo_byhum7.jpg
 
 #Spring doc
 springdoc:
