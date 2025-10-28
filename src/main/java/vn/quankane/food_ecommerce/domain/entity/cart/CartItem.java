@@ -4,8 +4,9 @@ import vn.quankane.food_ecommerce.domain.entity.base.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import vn.quankane.food_ecommerce.domain.entity.product.ProductVariation;
 
-@Entity(name = "CartItem")
+@Entity
 @Table(name = "cart_items")
 @NoArgsConstructor
 @AllArgsConstructor
@@ -25,4 +26,10 @@ public class CartItem extends BaseEntity {
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "cart_id", nullable = false)
   Cart cart;
+
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "product_variation_id", nullable = false)
+  ProductVariation productVariation;
+
+
 }

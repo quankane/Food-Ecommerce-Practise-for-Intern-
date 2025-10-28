@@ -8,8 +8,8 @@ import lombok.experimental.FieldDefaults;
 
 import java.util.List;
 
-@Entity(name = "Cart")
-@Table (
+@Entity
+@Table(
         name = "carts",
         uniqueConstraints = @UniqueConstraint(columnNames = "user_id")
 )
@@ -17,7 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 @Setter
-@Builder()
+@Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Cart extends BaseEntity {
 
@@ -31,4 +31,19 @@ public class Cart extends BaseEntity {
 
     @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, orphanRemoval = true)
     List<CartItem> cartItems;
+
+    // ---------------- Helper methods ----------------
+    public void addCartItem(CartItem item) {
+        if (!cartItems.contains(item)) {
+            cartItems.add(item);
+            item.setCart(this);
+        }
+    }
+
+    public void removeCartItem(CartItem item) {
+        if (cartItems.contains(item)) {
+            cartItems.remove(item);
+            item.setCart(null);
+        }
+    }
 }
