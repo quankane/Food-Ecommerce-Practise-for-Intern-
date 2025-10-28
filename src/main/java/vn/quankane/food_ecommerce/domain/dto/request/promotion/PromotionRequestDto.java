@@ -1,10 +1,10 @@
 package vn.quankane.food_ecommerce.domain.dto.request.promotion;
 
-import vn.quankane.food_ecommerce.constant.ErrorMessage;
-import com.example.haus.constant.promotion.PromotionStatus;
-import com.example.haus.constant.promotion.PromotionType;
-import com.example.haus.domain.validator.PositiveOrNull;
-import com.example.haus.domain.validator.ValidPromotionDates;
+import vn.quankane.food_ecommerce.constant.response.ErrorMessage;
+import vn.quankane.food_ecommerce.constant.promotion.PromotionStatus;
+import vn.quankane.food_ecommerce.constant.promotion.PromotionType;
+import vn.quankane.food_ecommerce.domain.validator.PositiveOrNull;
+import vn.quankane.food_ecommerce.domain.validator.ValidPromotionDates;
 import jakarta.validation.constraints.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;

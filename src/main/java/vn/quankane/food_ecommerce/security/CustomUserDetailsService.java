@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import vn.quankane.food_ecommerce.constant.ErrorMessage;
+import vn.quankane.food_ecommerce.constant.response.ErrorMessage;
 import vn.quankane.food_ecommerce.exception.ResourceNotFoundException;
 import vn.quankane.food_ecommerce.repository.UserRepository;
 

@@ -1,6 +1,6 @@
 package vn.quankane.food_ecommerce.domain.validator;
 
-import vn.quankane.food_ecommerce.constant.ErrorMessage;
+import vn.quankane.food_ecommerce.constant.response.ErrorMessage;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 
