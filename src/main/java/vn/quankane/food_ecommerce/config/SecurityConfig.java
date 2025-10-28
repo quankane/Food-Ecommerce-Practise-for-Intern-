@@ -42,20 +42,16 @@ public class SecurityConfig {
     CustomPreFilter customizePreFilter;
 
     @Value("${security.public-endpoints}")
-    @NonFinal()
-    static String[] PUBLIC_ENDPOINTS;
+    String[] PUBLIC_ENDPOINTS;
 
     @Value("${security.user-endpoints}")
-    @NonFinal()
-    static String[] USER_ENDPOINTS;
+    String[] USER_ENDPOINTS;
 
     @Value("${security.admin-endpoints}")
-    @NonFinal()
-    static String[] ADMIN_ENDPOINTS;
+    String[] ADMIN_ENDPOINTS;
 
     @Value("${security.swagger-endpoints}")
-    @NonFinal()
-    static String[] SWAGGER_ENDPOINTS;
+    String[] SWAGGER_ENDPOINTS;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {

@@ -29,19 +29,19 @@ import java.util.function.Function;
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class JwtServiceImpl implements JwtService {
 
-    @Value("${jwt.expiryHour")
+    @Value("${jwt.expiryHour}")
     @NonFinal
     long expiryHour;
 
-    @Value("${jwt.expiryDay")
+    @Value("${jwt.expiryDay}")
     @NonFinal
     long expiryDay;
 
-    @Value("${jwt.accessKey")
+    @Value("${jwt.accessKey}")
     @NonFinal
     String accessKey;
 
-    @Value("${jwt.refreshKey")
+    @Value("${jwt.refreshKey}")
     @NonFinal
     String refreshKey;
 
